@@ -1,0 +1,59 @@
+sudo dnf update
+sudo dnf install gcc g++ bison flex bc make cmake
+sudo dnf install clang++
+# import to add this package so opencl and sycl can use any supported intel GPU
+sudo dnf install intel-opencl
+sudo dnf install intel-opencl
+sudo dnf install intel-compute-runtime
+sudo dnf install intel-gmmlib
+# for a specific version of firmware
+# sudo dnf install intel-gpu-firmware-20250708
+sudo dnf install intel-gpu-firmware
+sudo dnf install intel-igc
+audo dnf install intel-igc-libs
+sudo dnf install intel-level-zero
+sudo dnf install intel-level-zero-devel
+sudo dnf install intel-mediasdk
+sudo dnf install intel-ocloc
+sudo dnf install intel-ocloc-devel
+sudo dnf install intel-opencl
+sudo dnf install intel-opencl-clang
+# sudo dnf install intel-vpl-gpu-rt
+# sudo dnf install intel-vsc-firmware
+
+sudo dnf install vim
+# java packages for runtime and development
+sudo dnf install java-25-openjdk-headless java-25-openjdk java-25-openjdk-demo java-25-openjdk-javadoc java-25-openjdk-devel
+# micro python development environment for raspberry pi pico's and other mcu boards, like esp32
+sudo dnf install thonny
+sudo dnf install virtualenv
+sudo dnf install python3.11
+sudo dnf install python3-pyopencl
+sudo dnf install ncurses-devel
+sudo dnf install openssl-devel
+sudo dnf install elfutils-devel
+sudo dnf install elfutils-libelf-devel
+# chrome browser
+sudo dnf install chromium
+sudo dnf install hdparm
+# open cl information about the hardware that it can see and use
+sudo dnf install clinfo
+
+# google search in browser  'intel oneapi base toolkit download'
+# make sure to download 2025.2 version or higher
+# also make sure you select Linux for Operating System and make
+# sure offline install is select as well.
+# afterwards verify the sha384 checksum is valid
+#         SHA384  176c5400c7f7df83d19ac03e3f8d9f11a10c7b6e44f641ca3129fae3b4aac65541185bb6501451a57df664e4f6031eb0
+
+# to install the oneapi base toolkit
+sudo source intel-oneapi-base-toolkit-2025.2.0.592_offline.sh
+
+# the toolkit should be installed in /opt folder, and to setup and use
+# the oneapi toolkit each time, then type in the following from a terminal
+source /opt/intel/oneapi/setvars.sh
+
+# to get a list of sycl devices on your system, type in
+sycl-ls
+
+

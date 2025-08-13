@@ -1,0 +1,27 @@
+# need python 3.11 install
+# create a virtual environment called openvino3.11, or use any name you like
+virtualenv --python=python3.11 openvino3.11
+
+pip install --upgrade pip
+pip install huggingface_hub
+pip install datasets
+# pip install meson
+pip install numpy
+pip install openvino
+pip install openvino_genai
+pip install openvino-runtime
+pip install openvino-dev
+pip install PIL
+pip install pillow
+pip install protobuf
+pip install tensorflow[cpu]
+pip install base64
+pip install huggingface_hub
+pip install transformers
+pip install torch[cpu]
+pip install protobuf
+pip install safetensors
+pip install sentencepiece
+
+# pip install pytorch
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
